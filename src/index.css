@@ -22,7 +22,7 @@ ol {
 }
 
 h2 {
-  margin: 64px auto 32px auto;
+  margin: 15px auto 15px auto;
 }
 
 img {
@@ -40,4 +40,9 @@ input:focus {
 
 button:hover {
   cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }

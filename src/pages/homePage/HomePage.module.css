@@ -1,0 +1,9 @@
+.trend {}
+
+.trend li {
+    padding: 5px 0px;
+}
+
+.trend li a {
+    text-decoration: underline;
+}

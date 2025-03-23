@@ -1,0 +1,24 @@
+.navigation {
+    border-color: #fff;
+}
+
+.navigation ul {
+    padding: 15px;
+    display: flex;
+    direction: row;
+    gap: 15px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    box-shadow: 2px 4px 5px 1px rgba(0, 0, 0, 0.6);
+
+}
+
+.navigation ul li {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.active {
+    color: rgb(190, 50, 50);
+}
