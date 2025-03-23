@@ -1,0 +1,13 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height: 245px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    object-fit: cover;
+}

@@ -1,0 +1,47 @@
+        .header {
+            background-color: #3f51b5;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+        }
+
+        .header input {
+            width: 100%;
+            height: 40px;
+            background: #fff;
+            border: none;
+            font-size: 14px;
+            color: #000;
+            padding-left: 40px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+
+        }
+
+        .header form {
+            vertical-align: middle;
+            white-space: nowrap;
+            position: relative;
+            left: 33%;
+            width: 33%;
+        }
+
+        .header form button {
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            top: 0px;
+            left: 0px;
+            border: none;
+            color: #000;
+            background-color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .toast {
+            background-color: aqua;
+        }
