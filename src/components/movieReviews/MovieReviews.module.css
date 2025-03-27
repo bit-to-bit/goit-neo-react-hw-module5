@@ -1,0 +1,28 @@
+.reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 32px;
+}
+
+.reviews li {
+
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 15px;
+    max-width: 800px;
+}
+
+.author {
+    font-weight: bold;
+    display: flex;
+    gap: 8px;
+}
+
+.content {
+    margin-top: 15px;
+}
+
+.no-data {
+    padding: 15px;
+}

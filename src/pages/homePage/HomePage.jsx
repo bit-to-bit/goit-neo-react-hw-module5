@@ -1,31 +1,23 @@
 import { useEffect, useState } from 'react';
 import { fetchTrandingMovies } from '../../api/movies';
+import MovieList from '../../components/movieList/MovieList';
 import css from './HomePage.module.css';
-import Movie from '../../components/movie/Movie';
 
 const HomePage = () => {
-  const [trendingMovies, setTrandingMovies] = useState(null);
+  const [movies, setMovies] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetchTrandingMovies();
-      setTrandingMovies(res);
+      setMovies(res);
     };
-    console.log('do');
     fetchData();
   }, []);
 
   return (
-    <div>
+    <div className={css.home}>
       <h2>Tranding today</h2>
-      <ul className={css.trend}>
-        {trendingMovies &&
-          trendingMovies.map(movie => (
-            <li key={movie.id}>
-              <Movie movie={movie} />
-            </li>
-          ))}
-      </ul>
+      {movies && <MovieList movies={movies} />}
     </div>
   );
 };

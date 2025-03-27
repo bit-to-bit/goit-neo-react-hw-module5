@@ -1,26 +1,23 @@
-import css from './SearchBar.module.css';
+import css from './Search.module.css';
 import { Field, Formik, Form } from 'formik';
 import { FiSearch } from 'react-icons/fi';
 import toast, { Toaster } from 'react-hot-toast';
 
-const SearchBar = ({ onSearch }) => {
+const showToast = () => {
+  toast.custom(<div className={css.toast}>Enter a query to search movies</div>);
+};
+
+const Search = ({ onSearch }) => {
   const handleSubmit = values => {
-    if (values.query.trim() == '') {
-      toast.loading('Enter a query to search for images', {
-        duration: 3000,
-        position: 'top-center',
-        style: {
-          background: '#4E64E0',
-          color: '#fff',
-        },
-      });
+    if (!values.query.trim()) {
+      showToast();
       return;
     }
     onSearch(values.query);
   };
 
   return (
-    <header className={css.header}>
+    <div className={css.search}>
       <Formik
         initialValues={{
           query: '',
@@ -33,7 +30,7 @@ const SearchBar = ({ onSearch }) => {
             name='query'
             autoComplete='off'
             autoFocus
-            placeholder='Search images and photos'
+            placeholder='Search movies'
           />
           <button type='submit'>
             <FiSearch />
@@ -41,12 +38,12 @@ const SearchBar = ({ onSearch }) => {
         </Form>
       </Formik>
       <Toaster
-        containerStyle={{
-          top: 96,
+        toastOptions={{
+          removeDelay: 500,
         }}
       />
-    </header>
+    </div>
   );
 };
 
-export default SearchBar;
+export default Search;

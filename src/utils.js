@@ -1,11 +1,8 @@
-import { contactsInitialState } from './constants';
+import avatar from './img/avatar.jpg';
+import { apiPathToImg } from './constants';
 
-const getContactInitialState = () => {
-  const localData = localStorage.getItem('contacts');
-  if (localData) {
-    return JSON.parse(localData);
-  }
-  return contactsInitialState;
+export const getImgLink = fileName => {
+  return fileName ? `${apiPathToImg}${fileName}` : avatar;
 };
 
-export default getContactInitialState;
+export const formatRating = rating => Number.parseFloat(rating * 10).toFixed(2);

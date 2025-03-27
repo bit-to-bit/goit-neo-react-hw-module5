@@ -1,0 +1,37 @@
+.cast {
+    margin: 32px auto;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 48px;
+    row-gap: 48px;
+    justify-content: center;
+}
+
+.cast li {
+    border: 1px solid grey;
+    width: 210px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.photo {
+    width: 210px;
+    height: 310px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    background-color: #f8f0e6;
+    height: 100%;
+}
+
+.cast p {
+    text-align: center;
+    padding: 5px;
+}
+
+.character {
+    font-weight: bold;
+}

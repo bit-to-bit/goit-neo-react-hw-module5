@@ -17,6 +17,22 @@ export const fetchTrandingMovies = async () => {
   return data.results;
 };
 
+export const fetchMovies = async (query, page) => {
+  const options = {
+    headers: {
+      Authorization: authorization,
+    },
+    params: {
+      language: 'en-US',
+      query: query,
+      page: page,
+    },
+  };
+  const { data } = await axios.get('/search/movie', options);
+
+  return data;
+};
+
 export const fetchMovie = async movieId => {
   const options = {
     headers: {
@@ -25,6 +41,26 @@ export const fetchMovie = async movieId => {
   };
   const { data } = await axios.get(`/movie/${movieId}`, options);
 
-  console.dir(data);
+  return data;
+};
+
+export const fetchReviews = async movieId => {
+  const options = {
+    headers: {
+      Authorization: authorization,
+    },
+  };
+  const { data } = await axios.get(`/movie/${movieId}/reviews`, options);
+  return data;
+};
+
+export const fetchCast = async movieId => {
+  const options = {
+    headers: {
+      Authorization: authorization,
+    },
+  };
+  const { data } = await axios.get(`/movie/${movieId}/credits`, options);
+
   return data;
 };
