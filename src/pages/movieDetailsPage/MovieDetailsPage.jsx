@@ -6,6 +6,8 @@ import Additional from '../../components/additional/Additional';
 import { FaBackward } from 'react-icons/fa';
 import { getImgLink, formatRating } from '../../utils';
 
+
+
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
@@ -22,7 +24,7 @@ const MovieDetailsPage = () => {
 
   return (
     <div>
-      <Link to={backLink.current} className={css.back}>
+      <Link to={backLink.current} className={css.back} state={location}>
         <FaBackward />
         {'Go Back'}
       </Link>
